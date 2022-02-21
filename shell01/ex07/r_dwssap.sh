@@ -1,0 +1,1 @@
+cat /etc/passwd | awk -F ":" '{print $1}' | sed '2~2d'  | rev  | sort -r | tr '\n' " " | sed 's/ /, /g' | sed 's/..$//' | sed 's/$/./'
